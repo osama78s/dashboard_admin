@@ -1,0 +1,40 @@
+.next{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+}
+.prev{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+}
+
+.right{
+    animation: rightAnimation alternate infinite 0.5s ease-in-out;
+}
+
+@keyframes rightAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(5px);
+    }
+}
+
+.left{
+    animation: leftAnimation alternate infinite 0.5s ease-in-out;
+}
+
+@keyframes leftAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-5px);
+    }
+}

@@ -1,0 +1,44 @@
+:root{
+    --border-color : transparent transparent white   transparent;
+}
+.dark{
+    --border-color : transparent transparent white transparent;
+}
+.animation::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -13px;
+    border: 0 solid transparent;
+    border-color: var(--border-color);
+    border-width: 7px;
+    width: 0;
+    height: 0;
+    box-shadow:  0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+}
+@keyframes top {
+    from {
+        transform: translateY(20px) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes hidden {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(20) scale(0);
+        opacity: 0;
+    }
+}
+.animation-start{
+    animation: top ease forwards 0.5s;
+}
+.animation-end{
+    animation: hidden ease forwards 0.5s;
+}
