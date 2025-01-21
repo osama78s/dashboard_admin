@@ -45,13 +45,13 @@ export default function ProfileForm() {
 
                 <div className='flex items-center justify-center mb-4'>       
                     <label htmlFor="img" className='cursor-pointer'>
-                        <img className='rounded-full object-center shadow-xl h-[250px] max-w-full w-[250px]'  src={selectedImage || '/default.jpg'}  alt='Your Image'/>
+                        <img className='rounded-full object-center shadow-xl w-[150px] h-[150px] md:h-[250px] max-w-full md:w-[250px]'  src={selectedImage || '/default.jpg'}  alt='Your Image'/>
                         <input onChange={handleImageChange} accept='image/*' type="file" name='image' className='hidden' id='img'/>
                         {state?.errors?.image && <span className='dark:text-red'>{state.errors.image}</span>}
                     </label>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                     <div className="flex flex-col w-full">
                         <label className='mb-1' htmlFor="first_name">First Name</label>
                         <input defaultValue={state?.data?.first_name || user?.first_name} type='text' name='first_name' id='first_name' placeholder='First Name'
@@ -67,7 +67,7 @@ export default function ProfileForm() {
                         {state?.errors?.last_name && <span className='dark:text-red'>{state.errors.last_name}</span>}
                     </div>
                 </div>
-                <div className="flex gap-4 mt-4">
+                <div className="flex flex-col sm:flex-row gap-4 mt-4">
                     <div className="flex flex-col w-full ">
                         <label className='mb-1' htmlFor="phone">Phone</label>
                         <div className="relative">
@@ -87,7 +87,7 @@ export default function ProfileForm() {
                         {state?.errors?.gender && <span className='dark:text-red'>{state.errors.gender}</span>}
                     </div>
                 </div>
-                <div className="flex gap-4 mt-4">
+                <div className="flex flex-col sm:flex-row gap-4 mt-4">
                     <div className="flex flex-col w-full">
                         <label className='mb-1' htmlFor="city">City</label>
                         <div className="relative">
