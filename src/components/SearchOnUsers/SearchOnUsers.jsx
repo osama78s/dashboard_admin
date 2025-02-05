@@ -7,7 +7,9 @@ export default function SearchOnUsers({ token }) {
 
     const { setUsers } = useUsers();
 
+
     const handleChangeUsers = async (e) => {
+
         try {
             const res = await axios.get(`http://127.0.0.1:8000/api/users/search/user?users=${e.target.value}`, {
                 headers: {

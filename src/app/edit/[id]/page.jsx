@@ -15,13 +15,13 @@ export default async function page({ params }) {
     return notFound()
   }
   return (
-    <div className='relative'>
+    <>
       <UpdateId id={id} />
       <ToastMessage/>
       <div className="dark:text-white py-[10px]">
         <h1 className='text-[50px] text-blue dark:text-white font-semibold'>Edit Product</h1>
         <EditProductForm id={id} product={product} />
       </div>
-    </div>
+    </>
   )
 }

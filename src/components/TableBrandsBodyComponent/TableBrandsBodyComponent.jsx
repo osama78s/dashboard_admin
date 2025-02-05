@@ -10,7 +10,8 @@ import { useBrands } from '../Context/Brands';
 import { useRouter } from 'next/navigation';
 
 export default function TableBrandsBodyComponent({ user, token }) {
-    const { brands, setBrands } = useBrands()
+    const { brands, setBrands } = useBrands();
+
     const { message, setMessage } = useMessages();
     const { pageNumberBrands, setTotalPages, totalPages, setPageNumberBrands } = UsePageNumber();
     const router = useRouter();

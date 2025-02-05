@@ -9,13 +9,13 @@ export default async function EditSubcategory({ params }) {
   const data = await GetSubcategory(id);
   
   return (
-    <div className='relative'>
+    <>
       <ToastMessage/>
       <UpdateId id={id} />
       <div className="dark:text-white py-[10px]">
         <h1 className='text-[50px] text-blue dark:text-white font-semibold'>Edit Subcategory</h1>
         <EditSubcategoryForm id={id} data={data} />
       </div>
-    </div>
+    </>
   )
 }

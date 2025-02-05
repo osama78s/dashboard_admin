@@ -8,13 +8,13 @@ export default async function EditBrand({ params }) {
   const brand = await GetBrand(id);
   console.log(brand)
   return (  
-    <div className='relative'>
+    <>
       <ToastMessage/>
       <UpdateId id={id} />
       <div className="dark:text-white py-[10px]">
         <h1 className='text-[50px] text-blue dark:text-white font-semibold'>Edit Brand</h1>
         <EditBrandFrom id={id} brand={brand} />
       </div>
-    </div>
+    </>
   )
 }

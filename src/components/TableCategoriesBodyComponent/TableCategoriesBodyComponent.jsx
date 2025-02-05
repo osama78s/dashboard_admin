@@ -7,6 +7,7 @@ import { useMessages } from '../Context/Messages';
 import { UsePageNumber } from '../Context/PageNumber';
 import { useCategories } from '../Context/Categories';
 import axios from 'axios';
+import { useBrands } from '../Context/Brands';
 
 export default function TableCategoriesBodyComponent({ user, token }) {
     const { categories, setCategories } = useCategories();
@@ -17,7 +18,6 @@ export default function TableCategoriesBodyComponent({ user, token }) {
         const fetchProducts = async () => {
             const res = await axios.get(`http://127.0.0.1:8000/api/categories?page=${pageNumberCategories}`, {
                 headers: {
-
                     'Authorization': `Bearer ${token}`
                 }
             })
@@ -108,7 +108,7 @@ export default function TableCategoriesBodyComponent({ user, token }) {
                                 <TableCell className="space-x-2">
                                     {user.role === 'user' ? (
                                         <>
-                                            <Link href={`/subcategories/${category.id}`} className="font-medium text-white bg-blue px-4 py-1 rounded-sm dark:text-white dark:bg-black">
+                                            <Link href={`/categories/${category.id}`} className="font-medium text-white bg-blue px-4 py-1 rounded-sm dark:text-white dark:bg-black">
                                                 Edit
                                             </Link>
                                             <button onClick={() => handleDelete(category.id)} type="submit" className="font-medium text-white bg-red px-4 py-1 rounded-sm  dark:text-white dark:bg-red">

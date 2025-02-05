@@ -39,7 +39,6 @@ export default function EditCategoryForm({ id, category }) {
                     {state?.errors?.code && <span className='dark:text-red'>{state.errors.code}</span>}
                 </div>
             </div>
-          
             <div className="flex flex-col w-full mt-4">
                     <label className='mb-1' htmlFor="status">Status</label>
                     <select defaultValue={state?.data?.status ||  category?.status } className='dark:text-black focus:outline-none focus:ring-0 border-none shadowNav' name="status" id="status">
