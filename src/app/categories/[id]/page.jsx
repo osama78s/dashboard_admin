@@ -1,10 +1,10 @@
 import EditCategoryForm from '@/components/EditCategoryForm/EditCategoryForm';
 import GetCategory from '@/components/GetCategory/GetCategory';
 import ToastMessage from '@/components/ToastMessage/ToastMessage';
-import UpdateId from '@/components/UpdateId/UpdateID';
+import UpdateId from '@/components/UpdateId/UpdateId';
 
 export default async function EditCategory({ params }) {
-  const { id } = await params;
+  const { id } = params;
   const category = await GetCategory(id);
   
   return (
