@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import notFound from '../../public/6333074.jpg'
 import Link from 'next/link'
+
 export default function NotFound() {
   return (
     <div className='absolute left-0 top-0 w-full h-full dark:bg-white z-[4] flex flex-col gap-5 items-center justify-center'>
