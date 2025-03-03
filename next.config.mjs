@@ -18,7 +18,6 @@ const nextConfig = {
                 pathname: '/images/products/**'
             },
         ],
-        domains: ['localhost'],
     },
 };
 
