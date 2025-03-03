@@ -4,7 +4,7 @@ import ToastMessage from '@/components/ToastMessage/ToastMessage';
 import UpdateId from '@/components/UpdateId/UpdateID';
 
 export default async function EditBrand({ params }) {
-  const { id } = await params;
+  const { id } = params;
   const brand = await GetBrand(id);
   console.log(brand)
   return (  

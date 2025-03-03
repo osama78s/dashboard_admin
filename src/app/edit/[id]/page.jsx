@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import React, { Suspense } from 'react'
 
 export default async function page({ params }) {
-  const { id } = await params;
+  const { id } = params;
   const product = await GetProduct(id);
   if (!product) {
     return notFound()

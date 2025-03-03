@@ -5,7 +5,7 @@ import ToastMessage from '@/components/ToastMessage/ToastMessage';
 import UpdateId from '@/components/UpdateId/UpdateID';
 
 export default async function EditSubcategory({ params }) {
-  const { id } = await params;
+  const { id } = params;
   const data = await GetSubcategory(id);
   
   return (
