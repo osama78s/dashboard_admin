@@ -2,7 +2,7 @@ import EditSubcategoryForm from '@/components/EditSubcategoryForm/EditSubcategor
 import GetCategory from '@/components/GetCategory/GetCategory';
 import GetSubcategory from '@/components/GetSubcategory/GetSubcategory';
 import ToastMessage from '@/components/ToastMessage/ToastMessage';
-import UpdateId from '@/components/UpdateId/UpdateID';
+import UpdateId from '@/components/UpdateId/UpdateId';
 
 export default async function EditSubcategory({ params }) {
   const { id } = params;

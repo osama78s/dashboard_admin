@@ -1,7 +1,8 @@
 import EditBrandFrom from '@/components/EditBrandForm/EditBrandForm';
 import GetBrand from '@/components/GetBrand/GetBrand';
 import ToastMessage from '@/components/ToastMessage/ToastMessage';
-import UpdateId from '@/components/UpdateId/UpdateID';
+import UpdateId from '@/components/UpdateId/UpdateId';
+
 
 export default async function EditBrand({ params }) {
   const { id } = params;

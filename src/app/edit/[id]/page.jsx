@@ -4,7 +4,7 @@ import EditProductForm from '@/components/EditProductForm/EditProductForm';
 import GetProduct from '@/components/GetProduct/GetProduct';
 import Title from '@/components/Title/Title';
 import ToastMessage from '@/components/ToastMessage/ToastMessage';
-import UpdateId from '@/components/UpdateId/UpdateID';
+import UpdateId from '@/components/UpdateId/UpdateId';
 import { notFound } from 'next/navigation';
 import React, { Suspense } from 'react'
 
